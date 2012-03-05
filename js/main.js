@@ -6,7 +6,7 @@
   takeCover.main = {
     totalImages: 145,
     enoughLoaded: false,
-    speed: 200,
+    speed: 260,
     init: function() {
       _.bindAll(this);
       this.images = [];
