@@ -36,7 +36,7 @@
     },
     imageLoaded: function(src) {
       this.images.push(src);
-      if (this.images.length > 30 && !this.enoughLoaded) {
+      if (this.images.length > 12 && !this.enoughLoaded) {
         this.enoughLoaded = true;
         this.int = setInterval(this.showImage, this.speed);
         this.showImage();

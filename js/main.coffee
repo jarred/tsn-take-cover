@@ -28,7 +28,7 @@ takeCover.main =
 
 	imageLoaded: (src) ->
 		@images.push src
-		if @images.length > 30 && !@enoughLoaded
+		if @images.length > 12 && !@enoughLoaded
 			@enoughLoaded = true
 			@int = setInterval @showImage, @speed
 			@showImage()
