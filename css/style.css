@@ -58,13 +58,40 @@ legend {
   color: #000; }
 
 html, body {
-  background: #FFF; }
+  background: #FFF;
+  font: 300 20px/30px "Helvetica Neue", Sans-Serif; }
+
+#all {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  margin-top: -300px; }
 
 div#frame {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -300px;
-  margin-top: -200px; }
+  margin: 40px 0px; }
   div#frame img {
     width: 600px; }
+
+p.hello img.tsn {
+  position: relative;
+  top: 4px; }
+p.hello .thanks {
+  font-weight: 600; }
+
+p.who {
+  position: relative; }
+  p.who img.cnr {
+    position: relative;
+    top: 1px; }
+  p.who a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600; }
+
+.fb-like {
+  position: absolute;
+  left: 430px;
+  top: 7px; }
