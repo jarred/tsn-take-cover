@@ -3,6 +3,7 @@ takeCover.main =
 
 	totalImages: 145
 	enoughLoaded: false
+	speed: 200
 
 	init: ->
 		_.bindAll @
@@ -29,7 +30,7 @@ takeCover.main =
 		@images.push src
 		if @images.length > 30 && !@enoughLoaded
 			@enoughLoaded = true
-			@int = setInterval @showImage, 150
+			@int = setInterval @showImage, @speed
 			@showImage()
 
 		$('#frame').bind 'mouseover', @stopShow
@@ -50,6 +51,6 @@ takeCover.main =
 	startShowAgain: (e) ->
 		clearInterval @int
 		$('#frame').unbind 'mouseout', @startShowAgain
-		@int = setInterval @showImage, 150
+		@int = setInterval @showImage, @speed
 		@showImage()
 		return

@@ -6,6 +6,7 @@
   takeCover.main = {
     totalImages: 145,
     enoughLoaded: false,
+    speed: 200,
     init: function() {
       _.bindAll(this);
       this.images = [];
@@ -37,7 +38,7 @@
       this.images.push(src);
       if (this.images.length > 30 && !this.enoughLoaded) {
         this.enoughLoaded = true;
-        this.int = setInterval(this.showImage, 150);
+        this.int = setInterval(this.showImage, this.speed);
         this.showImage();
       }
       $('#frame').bind('mouseover', this.stopShow);
@@ -56,7 +57,7 @@
     startShowAgain: function(e) {
       clearInterval(this.int);
       $('#frame').unbind('mouseout', this.startShowAgain);
-      this.int = setInterval(this.showImage, 150);
+      this.int = setInterval(this.showImage, this.speed);
       this.showImage();
     }
   };
