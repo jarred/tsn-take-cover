@@ -31,6 +31,8 @@ takeCover.main =
 			@enoughLoaded = true
 			@int = setInterval @showImage, 150
 			@showImage()
+
+		$('#frame').bind 'mouseover', @stopShow
 		return
 
 	showImage: ->
@@ -38,4 +40,16 @@ takeCover.main =
 		img = new Image()
 		img.src = @images[n]
 		$('#frame').html img
+		return
+
+	stopShow: (e) ->
+		clearInterval @int
+		$('#frame').bind 'mouseout', @startShowAgain
+		return
+
+	startShowAgain: (e) ->
+		clearInterval @int
+		$('#frame').unbind 'mouseout', @startShowAgain
+		@int = setInterval @showImage, 150
+		@showImage()
 		return

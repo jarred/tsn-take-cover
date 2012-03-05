@@ -37,9 +37,10 @@
       this.images.push(src);
       if (this.images.length > 30 && !this.enoughLoaded) {
         this.enoughLoaded = true;
-        this.int = setInterval(this.showImage, 159);
+        this.int = setInterval(this.showImage, 150);
         this.showImage();
       }
+      $('#frame').bind('mouseover', this.stopShow);
     },
     showImage: function() {
       var img, n;
@@ -47,6 +48,16 @@
       img = new Image();
       img.src = this.images[n];
       $('#frame').html(img);
+    },
+    stopShow: function(e) {
+      clearInterval(this.int);
+      $('#frame').bind('mouseout', this.startShowAgain);
+    },
+    startShowAgain: function(e) {
+      clearInterval(this.int);
+      $('#frame').unbind('mouseout', this.startShowAgain);
+      this.int = setInterval(this.showImage, 150);
+      this.showImage();
     }
   };
 
