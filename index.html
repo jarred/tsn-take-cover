@@ -10,14 +10,17 @@
   <title>Take Cover</title>
 </head>
 <body>
+  <div id="frame"></div>
+
   <script src="./js/head-min.js"></script>
   <script type="text/javascript">
   head.js(
     "./js/jquery-min.js",
     "./js/underscore-min.js",
     "./js/backbone-min.js",
+    "./js/main.js",
     function () {
-      alert('ready');
+      window.takeCover.main.init();
     });
   </script>
 </body>
