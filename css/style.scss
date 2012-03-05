@@ -18,7 +18,7 @@ html, body{
 	left: 50%;
 	width: 600px;
 	margin-left: -300px;
-	margin-top: -330px;
+	margin-top: -350px;
 }
 
 div#frame{
@@ -58,4 +58,13 @@ p.who{
 	position: absolute;
 	left: 410px;
 	top: 7px;
+}
+
+p.smaller{
+	font: 500 12px/20px 'Helvetica Neue';
+	margin: 20px 0px;
+	color: #AAA;
+	a{
+		color: #AAA;
+	}
 }
