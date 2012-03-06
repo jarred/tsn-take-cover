@@ -1,7 +1,7 @@
 takeCover = window.takeCover ||= {}
 takeCover.main =
 
-	totalImages: 145
+	totalImages: 146
 	enoughLoaded: false
 	speed: 260
 
